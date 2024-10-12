@@ -1,0 +1,74 @@
+```lua
+repeat task.wait(1) until game and game.Players.LocalPlayer and game:IsLoaded()
+getgenv().Key = ""
+_G.Configs = {
+    allowed_actions = {
+        AutoBounty = true,
+        Team = "Marines", --> Default
+        AutoView = false,
+        IgnoreFruits = {"Buddha-Buddha", "Leopard-Leopard", "Portal-Portal"},
+        Webhook = {
+            Enabled = true,
+            Logs = {PlayerStatus = true, Console = false},
+            URL = ""--"https://discord.com/api/webhooks/id/token",
+        },
+        Dodge = false, --> Semi dodge
+        Race = {
+            V3 = {Enabled = false,
+                Settings = {
+                Human = 8500, --> Use human v3 at 5000 HP
+                Cyborg = 7 --[[ Skill uses in 5 seconds]],
+                Shark = {Stun = 2 --[[Skill uses when you get stunned in 5 seconds.]]},
+            }},
+            V4 = {Enabled = true, UseAt = 12000}},
+        MethodClicks = {Gun = false, Melee = true, Sword = false, CanM1At = 6000, Delay = 0.1},
+        
+        SafeZone = {Enabled = true, ProtectCD = false -->Protect cooldowns
+        , LowestHealth = 50, HighestHealth = 50, 
+        Max = 12000 --> Max Height
+    }, --> Use 50% or 70%
+        Ken = true,
+        Random = false, --> Use random skills
+        Weapons = {
+            Melee = {
+                Enable = true,
+                Skills = {
+                    Z = {Enable = false, HoldTime = 0.1, Number = 1},
+                    X = {Enable = true, HoldTime = 0.1, Number = 2},
+                    C = {Enable = false, HoldTime = 0.425, Number = 3},
+                },
+            },
+            ["Blox Fruit"] = {
+                Enable = true,
+                Skills = {
+                    Z = {Enable = true, HoldTime = 0.1, Number = 4},
+                    X = {Enable = true, HoldTime = 0.1, Number = 5},
+                    C = {Enable = false, HoldTime = 0.1, Number = 6},
+                    V = {Enable = false, HoldTime = 0.1, Number = 7},
+                    F = {Enable = false, HoldTime = 0.1, Number = 8},
+                },
+            },
+            Gun = {
+                Enable = true,
+                Skills = {
+                    Z = {Enable = true, HoldTime = 0.1, Number = 9},
+                    X = {Enable = true, HoldTime = 0.1, Number = 10},
+                },
+            },
+            Sword = {
+                Enable = true,
+                Skills = {
+                    Z = {Enable = true, HoldTime = 0.1, Number = 11},
+                    X = {Enable = true, HoldTime = 0.1, Number = 12},
+                },
+            },
+        }
+    },
+
+    Performance = {
+        WhiteScreen = false, --> Not recommended to use
+        BlackScreen = {Enabled = true, Font = Enum.Font.FredokaOne, Transparency = 0.25},
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-BountyEz.lua"))()
+```
